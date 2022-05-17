@@ -1,0 +1,34 @@
+<label></label>
+<!-- event binding -->
+<!--
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+-->
+<!-- two-way binding -->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+
+
+<!-- <p>{{ serverName }}</p> -->
+
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Aggiungi server</button> <!-- property binding e Event Binding-->
+<!--<p>{{ allowNewServer }}</p>
+<p [innerText]="allowNewServer">{{ allowNewServer }}</p>
+<p [innerText]="serverCreationStatus"></p>-->
+
+<!-- qui faceva vedere come visualizzare o nascondere una sezione se una condizine if ele risulta soddisfatta
+<p *ngIf="serverCreated; else noServer">Server creato. Il nome è {{ serverName }}</p>
+
+<ng-template #noServer>
+  <p>nessun server creato!</p>
+</ng-template>
+-->
+
+<p *ngIf="serverCreated">Server creato. Il nome è {{ serverName }}</p>
+
+<app-server></app-server>
+<app-server></app-server>
