@@ -13,6 +13,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'Nessun server creato';
   serverName = 'hardcoded server';
   serverCreated = false;
+  servers = ['Testserver', 'Testserver 2'];
 
   // dopo 2s abilita il button add server
   constructor() {
@@ -26,6 +27,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server è stato creato. Il nome è ' + this.serverName;
   }
 

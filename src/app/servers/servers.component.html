@@ -30,5 +30,4 @@
 
 <p *ngIf="serverCreated">Server creato. Il nome è {{ serverName }}</p>
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let srv of servers"></app-server>
